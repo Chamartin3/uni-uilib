@@ -1,0 +1,24 @@
+$theme-colors:(
+    "primary": #17aecf,
+    "secondary": #26496d,
+    "base": #dbe1ed,
+    "accent": #ec1c6f     
+);
+
+:root {
+    @each $name, $col in $theme-colors {
+        --#{$name}: #{$col};
+    }
+}
+
+
+@each $name, $col in $theme-colors {
+    .#{$name} { background-color: $col !important; }
+    .#{$name}--text { color: $col }
+}
+
+.dark { color:white !important; }
+
+body {
+    background-color: var(--base); 
+    }

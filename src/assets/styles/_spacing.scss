@@ -1,0 +1,49 @@
+
+$base_cocient: 2.5;
+
+$sides:(
+    "top": 't',
+    "bottom": 'b',
+    "left": 'l',
+    "right": 'r'      
+);
+$vertical: 'top', 'bottom';
+$horizontal: 'left', 'right';
+
+
+@mixin variable_attr($name, $value, $subattrs: null) {
+    @if $subattrs {
+        @each $subattr  in $subattrs {
+            #{$name}-#{$subattr}:#{$value}
+        }
+    } @else {
+        #{$name}: #{$value}
+    }
+}
+
+@mixin negative_and_positive($attr, $name, $unit, $subattrs: null) {
+    $value: #{$unit * $base_cocient}px;
+    .#{$name}-#{$unit} {
+        @include variable_attr($attr, $value, $subattrs);
+    }
+    .#{$name}-n#{$unit} {
+        @include variable_attr($attr, -#{$value}, $subattrs);
+    }    
+}
+
+
+@mixin generate_atribute($atribute, $abreviation, $variants){
+    @for $i from 1 through $variants {
+        @each $name, $abrv in $sides {
+            @include negative_and_positive( #{$atribute}-#{$name}, #{$abreviation}#{$abrv} ,$i);
+        }
+        @include negative_and_positive( #{$atribute}, #{$abreviation}x ,$i,  $horizontal);
+        @include negative_and_positive( #{$atribute}, #{$abreviation}y ,$i,  $vertical);
+        @include negative_and_positive( #{$atribute}, #{$abreviation}a ,$i);
+        
+    }
+}
+
+@include generate_atribute('margin', 'm', 10);
+@include generate_atribute('padding', 'p', 10);
+

@@ -1,0 +1,16 @@
+
+// Text input
+.Mui-focused {
+    color: var(--accent)  !important;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline  {
+    border-color: var(--accent)  !important;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}

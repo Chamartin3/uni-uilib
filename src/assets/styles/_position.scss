@@ -1,0 +1,35 @@
+.justify-start {
+  display:flex;
+  justify-content: flex-start 
+}
+
+.justify-end {
+  display:flex;
+  justify-content:  flex-end 
+}
+
+.justify-center {
+  display:flex;
+  justify-content:  center 
+}
+
+.justify-between {
+  display:flex;
+  justify-content: space-between 
+}
+
+.justify-evenly {
+  display:flex;
+  justify-content:  space-evenly
+}
+
+.justify-around {
+  display:flex;
+  justify-content: space-around 
+}
+
+
+.center {
+  margin: auto;
+  justify-content:  center 
+}

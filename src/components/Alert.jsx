@@ -5,8 +5,7 @@ import Alert from '@material-ui/lab/Alert';
 import { Snackbar, CircularProgress } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-import COLORS from '../styles/colors'
-
+import  { COLORS } from '../uiTheme'
 
 
 export default React.forwardRef(({ color, ...props }, ref) => {

@@ -1,12 +1,31 @@
 import React from 'react';
 import './assets/styles/index.scss'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
-const COLORS = {
+let baseColors = Object.entries({
   primary: '#17aecf',
   secondary: '#26496d',
   accent: '#ec1c6f',
   base: '#dbe1ed',
+})
+
+const colorReducer = (prev, [ name, color]) => {
+  const tinycolor = require("tinycolor2");
+  let base = tinycolor(color)
+  return {
+    [name]: {
+      name:name,
+      main:base.toHexString(),
+      dark: base.darken().toHexString(),
+      light: base.brighten().toHexString(),
+      contrastText: base.isDark() ? '#F2F3F4': '#000000',
+      oposite: name === 'accent' ? 'base' : 'accent',
+      obj: base,
+    },
+    ...prev 
+  }
 }
+const COLORS = baseColors.reduce(colorReducer, {})
 
 
 const theme = createMuiTheme({
@@ -14,19 +33,11 @@ const theme = createMuiTheme({
     fontFamily: 'Muli',
   },
   props: {
-    MuiButton: {
-      variant: 'contained'
-    },
     MuiTextField: {
       variant: 'outlined'
     },
   },
   overrides: {
-    MuiButton: {
-      root: {
-        borderRadius: 25,
-      }
-    },
     MuiInputBase: {
       "&$focus": {
         outline: 2
@@ -36,28 +47,25 @@ const theme = createMuiTheme({
       root: {
         borderRadius: 25,
         "&$focused": {
-          color: COLORS.accent
+          color: COLORS.accent.main
         }
       },
     }
   },
   palette: {
     tonalOffset: 0.2,
-    primary: {
-      main: COLORS.primary,
-      contrastText: '#ffff'
-    },
-    secondary: {
-      main: COLORS.accent,
-    }
+    ...COLORS
   },
 
 
 });
 
 
-function AppTheme(props) {
+function UniUiTheme(props) {
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 }
 
-export default AppTheme;
+export {
+  UniUiTheme,
+  COLORS
+}

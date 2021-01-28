@@ -1,9 +1,15 @@
-import UniTextField from './TextField'
-import UniButton from './Button'
 import UniAlert from './Alert'
+import UniButton from './Button'
+import UniTextField from './TextField'
+import UniDrawer from './Drawer'
 
-export {
-  UniTextField,
+
+
+const Components =  {
+  UniAlert,
   UniButton,
-  UniAlert
+  UniTextField,
+  UniDrawer
 }
+
+export default Components

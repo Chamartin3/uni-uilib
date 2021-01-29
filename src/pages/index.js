@@ -9,7 +9,6 @@ import {
 
 import routes from './routes'
 
-
 const Router = () => {
   let location = useLocation();
     return (

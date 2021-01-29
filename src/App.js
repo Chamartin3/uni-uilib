@@ -136,7 +136,7 @@ export default function App() {
         <List>
           {routes.map((component, index) => (
             <ListItem button key={index} 
-            onClick={()=>router.push(`./${component.name}`)}
+            onClick={()=>router.push(component.path)}
             key={index}>
               <ListItemText primary={component.name} />
             </ListItem>

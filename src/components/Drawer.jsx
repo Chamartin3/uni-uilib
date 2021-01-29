@@ -30,20 +30,6 @@ import {
 
 import  {COLORS } from '../uiTheme'
 
-
-const LINKS = [
-  {
-    name:'Inicio',
-    path:'/main',
-    icon:<Dashboard/>
-  },
-  {
-    name:'Mi Perfil',
-    path:'/profile',
-    icon:<Person/>
-  } 
-]
-
 const width = 216
 const isSmall = false
 
@@ -112,8 +98,7 @@ export default function PersistentDrawerLeft() {
         <Divider />
         <List>
           {routes.map((name,link) => (
-            <ListItem button 
-              >
+            <ListItem button >
               <ListItemText primary={link.name} />
             </ListItem>
           ))}

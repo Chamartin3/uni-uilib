@@ -1,42 +1,42 @@
 
 import Buttons from './ButonPage.jsx'
-import Cards from './CardsPage'
-import Dialogs from './DialogsPage'
-import Fields from './FieldsPage'
-import Text from './TypographyPage'
-import Main from './MainPage'
+import Cards from './CardsPage.jsx'
+import Dialogs from './DialogsPage.jsx'
+import Fields from './FieldsPage.jsx'
+import Text from './TypographyPage.jsx'
+import Main from './MainPage.jsx'
 
 const paths = [
   {
     name:'Home',
-    component:Main,
-    path:'/'
+    path:'',
+    component:Main
   },  
   {
     name:'Texto',
-    component:Text,
-    path:'/text'
+    path:'/parrafos',
+    component:Text
   },
   {
     name:'Botones',
-    component:Buttons,
-    path:'/botones'
+    path:'/botones',
+    component:Buttons
   },
   {
-    name:'Cards',
-    component:Cards,
-    path:'/cards'
+    name:'Tarjetas',
+    path:'/tarjetas',
+    component:Cards
   },
   {
-    name:'Dialogs',
-    component:Dialogs,
-    path:'/dialogs'
+    name:'Ventanas y Notificaciones',
+    path:'/notifiaciones',
+    component:Dialogs
   },
-  {
-    name:'Fields',
-    component:Fields,
-    path:'/formularios'
-  }  
+  // {
+  //   name:'Formularios',
+  //   path:'/formularios',
+  //   component:Fields
+  // }  
 
 ]
 

@@ -1,9 +1,11 @@
+import React from 'react';
+import clsx from 'clsx';
+
+
 import RouterView from './pages'
 import routes from './pages/routes'
 import { useHistory } from "react-router-dom";
 
-import React from 'react';
-import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -95,6 +97,7 @@ export default function App() {
     setOpen(false);
   };
 
+  console.log(RouterView)
   return (
     <div className={classes.root}>
       <CssBaseline />

@@ -19,17 +19,17 @@ const View = props => {
         <div className='row justify-around  text-center my-2'> 
             <div className='centered my-2'>
               <UniButton size="small" content="prueba" />
-              <p className="tag mt-1"> Pequeño </p>
+              <p className="tag3 mt-1"> Pequeño </p>
             </div>           
             
             <div className='centered my-2'>
               <UniButton  size="medium" content="prueba"  />
-              <p className="tag mt-1"> Mediano </p>
+              <p className="tag3 mt-1"> Mediano </p>
             </div>
             
             <div className='centered my-2'>
               <UniButton size="large" content="prueba" />
-              <p className="tag mt-1"> Grande </p>
+              <p className="tag3 mt-1"> Grande </p>
             </div>
         </div> 
 
@@ -39,22 +39,22 @@ const View = props => {
         <div className='row justify-around  text-center my-2'> 
             <div className='centered my-2'>
               <UniButton variant="text" content="prueba" />
-              <p className="tag mt-1"> Texto </p>
+              <p className="tag3 mt-1"> Texto </p>
             </div>           
             
             <div className='centered my-2'>
               <UniButton variant="square" content="prueba"  />
-              <p className="tag mt-1"> Cuadrado </p>
+              <p className="tag3 mt-1"> Cuadrado </p>
             </div>            
             
             <div className='centered my-2'>
               <UniButton disabled content="prueba"  />
-              <p className="tag mt-1"> Deshabilitado </p>
+              <p className="tag3 mt-1"> Deshabilitado </p>
             </div>
             
             <div className='centered my-2'>
               <UniButton loading={true} content="prueba" />
-              <p className="tag mt-1"> En Espera </p>
+              <p className="tag3 mt-1"> En Espera </p>
             </div>
         </div>
 
@@ -70,17 +70,17 @@ const View = props => {
         <div className='row justify-around  text-center my-2'> 
             <div className='centered my-2'>
               <UniButton color="accent" size="small" content="prueba" />
-              <p className="tag mt-1"> Pequeño </p>
+              <p className="tag3 mt-1"> Pequeño </p>
             </div>           
             
             <div className='centered my-2'>
               <UniButton  color="accent" size="medium" content="prueba"  />
-              <p className="tag mt-1"> Mediano </p>
+              <p className="tag3 mt-1"> Mediano </p>
             </div>
             
             <div className='centered my-2'>
               <UniButton color="accent" size="large" content="prueba" />
-              <p className="tag mt-1"> Grande </p>
+              <p className="tag3 mt-1"> Grande </p>
             </div>
         </div>
 
@@ -91,22 +91,22 @@ const View = props => {
         <div className='row justify-around  text-center my-2'> 
             <div className='centered my-2'>
               <UniButton color="accent" variant="text" content="prueba" />
-              <p className="tag mt-1"> Texto </p>
+              <p className="tag3 mt-1"> Texto </p>
             </div>           
             
             <div className='centered my-2'>
               <UniButton color="accent" variant="square" content="prueba"  />
-              <p className="tag mt-1"> Cuadrado </p>
+              <p className="tag3 mt-1"> Cuadrado </p>
             </div>            
             
             <div className='centered my-2'>
               <UniButton color="accent" disabled content="prueba"  />
-              <p className="tag mt-1"> Deshabilitado </p>
+              <p className="tag3 mt-1"> Deshabilitado </p>
             </div>
             
             <div className='centered my-2'>
               <UniButton color="accent" loading={true} content="prueba" />
-              <p className="tag mt-1"> En Espera </p>
+              <p className="tag3 mt-1"> En Espera </p>
             </div>
         </div>
         <hr/>
@@ -151,6 +151,15 @@ const View = props => {
           </div>                  
           <div className='centered my-2'>
             <UniButton  color='accent' variant="icon" size="large" icon={UniIcon} content="Grande" />
+          </div>
+          <div className='centered my-2'>
+            <UniButton color='original' variant="icon" icon={UniIcon}  size="small" content="Pequeño" />
+          </div>
+          <div className='centered my-2'>
+            <UniButton color='original'  variant="icon" icon={UniIcon} content="Mediano"   />
+          </div>                  
+          <div className='centered my-2'>
+            <UniButton  color='original' variant="icon" size="large" icon={UniIcon} content="Grande" />
           </div>
           </div>
         </div>

@@ -1,29 +1,98 @@
 p {
-  font-family: Muli
+  font-family: Muli;
+  text-justify: inter-word;
+  text-align: justify;
 }
+$initial: 0.8rem;
+.parrafo {
+  text-justify: inter-word;
+  text-align: justify;
+}
+.titulo {
+  font-size:1.7rem;
+  font-weight: bold;
+}
+// .quote {
+//   padding: 30px;
+//   color: rgb(236, 28, 111);
+//   background-color: rgba(236, 28, 111, 0.3);
+//   text-align: justify;
+// }
+
+// $color:var(--accent);
+// .quote {
+//   padding: 30px;
+//   color: $color;
+//   background-color: rgba($color, 0.6);
+//   text-align: justify;
+// }
+
+@use "sass:color";
+
+$color: #ec1c6f;
+$colorback: lighten($color, 40%);
+.quote {
+  // padding: 30px;
+  padding: 1rem;
+  color: $color;
+  text-align: center;
+  background-color:$colorback;
+  font-style: oblique;
+  font-size: medium;
+  font-size:19px;
+}
+
+$color: #26496d;
+$colorback: lighten($color, 40%);
+.enfasis {
+  padding: 1rem;
+  color: $color;
+  text-align: justify;
+  background-color:$colorback;
+}
+
+$color: #dbe1ed;
+$colorback: lighten($color, 40%);
+.seccion {
+  padding: 1rem;
+  text-align: justify;
+  background-color:$color;
+}
+
+
+
+
+@for $i from 1 through 5 {
+  .tag#{$i}{
+    margin: 0;
+    font-family: Muli;
+    font-size: $initial;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    letter-spacing: 0.2rem;
+    text-align: center;
+  }
+  $initial:$initial - 0.05rem;
+}
+// .tag.tag1 { font-size: 0.9rem; }
+// .tag.tag2 { font-size: 0.8rem; }
+// .tag.tag3 { font-size: 0.7rem; }
 
 h1, h2, h3, h4, h5 {
   font-family: Quicksand
 }
-.tag{
-    margin: 0;
-    font-family: Muli;
-    text-transform: uppercase;
-    font-size: 0.6rem;
-    font-weight: lighter;
-    letter-spacing: 2px;
-  }
+h1.subtitulo { font-size: 1.75rem;}
+h2.subtitulo { font-size: 1.5rem;}
+h3.subtitulo { font-size: 1.25rem;}
+h4.subtitulo { font-size: 1rem;}
+h5.subtitulo { font-size: 0.75rem;}
 
-.titulo {
-    font-size: 2rem;
-    font-family: Quicksand;
-    font-weight: bold;
-}
 .subtitulo {
-    font-size: 1rem;
-    font-family: Quicksand;
-    font-weight:  bold;
-    font-size: 1rem;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  margin-top: -0.5em;
+  color: grey;
 }
 
 

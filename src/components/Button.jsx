@@ -100,7 +100,7 @@ const UniButton = ({ color, loading, content, variant, size, iconSize,...props }
         ...variantStyle
       },
       CircularProgress:{
-        color:theme.palette[baseColor.oposite].main
+        color:theme.palette[baseColor.oposite]?.main || 'white'
       },
       Icon:{
         color:  baseColor.main,

@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 import Logo  from '../assets/img/logoJSX.svg';
 
 
-const UniIcon = ({original, color, ...props}) =>  {
+const UniIcon = ({original, color, size,...props}) =>  {
   const classes = makeStyles(theme=>{
 
     let colorSchema = theme.palette[color]?.main
@@ -16,8 +16,17 @@ const UniIcon = ({original, color, ...props}) =>  {
       cls2:{ fill:theme.palette.accent.main  }
     } : {}
 
+    const iconSize = size ? 
+    {
+      height: theme.spacing(size),
+      width: theme.spacing(size)
+      
+    } : {  height: '100%' } 
+
     return {
-      imageIcon: {  height: '100%' },
+      imageIcon: {  
+        ...iconSize
+      },
       iconRoot: { textAlign: 'center'},
       ...originalSyle
     }

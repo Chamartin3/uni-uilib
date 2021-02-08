@@ -7,8 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import  { COLORS } from '../uiTheme'
 import UniIcon from './Icon'
-
 import { getIcon } from './utils'
+
 const AlertIcon = ({type, ...props}) => {
   const SuccesIcon = getIcon('DoneOutline')
   const ReportIcon = getIcon('Report')
@@ -35,7 +35,7 @@ const AlertIcon = ({type, ...props}) => {
       type === 'success' ? 
       <SuccesIcon {...iconProps} /> :
 
-      <UniIcon {...iconProps} />
+      <UniIcon {...iconProps} size={5} />
       }
     </span>
   )

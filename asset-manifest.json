@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/uni-uilib/static/css/main.3d0a9a60.chunk.css",
+    "main.js": "/uni-uilib/static/js/main.7ae22131.chunk.js",
+    "main.js.map": "/uni-uilib/static/js/main.7ae22131.chunk.js.map",
+    "runtime-main.js": "/uni-uilib/static/js/runtime-main.20d60d92.js",
+    "runtime-main.js.map": "/uni-uilib/static/js/runtime-main.20d60d92.js.map",
+    "static/css/2.f25a7245.chunk.css": "/uni-uilib/static/css/2.f25a7245.chunk.css",
+    "static/js/2.edb0a765.chunk.js": "/uni-uilib/static/js/2.edb0a765.chunk.js",
+    "static/js/2.edb0a765.chunk.js.map": "/uni-uilib/static/js/2.edb0a765.chunk.js.map",
+    "index.html": "/uni-uilib/index.html",
+    "static/css/2.f25a7245.chunk.css.map": "/uni-uilib/static/css/2.f25a7245.chunk.css.map",
+    "static/css/main.3d0a9a60.chunk.css.map": "/uni-uilib/static/css/main.3d0a9a60.chunk.css.map",
+    "static/js/2.edb0a765.chunk.js.LICENSE.txt": "/uni-uilib/static/js/2.edb0a765.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/uni-uilib/static/media/Quicksand-Bold.76f20c55.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.20d60d92.js",
+    "static/css/2.f25a7245.chunk.css",
+    "static/js/2.edb0a765.chunk.js",
+    "static/css/main.3d0a9a60.chunk.css",
+    "static/js/main.7ae22131.chunk.js"
+  ]
+}

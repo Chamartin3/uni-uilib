@@ -1,11 +1,3 @@
-import React from 'react';
-import { Remarkable } from 'remarkable';
-var md = new Remarkable();
-
-const readmePath = require("./README.md")
-
-const markdown = ()=> {
-return `
 # Libreria de Componentes Graficos UNI
 
 Los componentes estan diponibles a traves de https://Chamartin3.github.io/uni-uilib
@@ -35,31 +27,6 @@ Comonente del icono SVG de UNI, que permite dibujar este con los colores origina
 ### UniDialog
 
 Comonente de ventanas de norificación que cuenta con una variante de ventana de confirmación .
-`
-}
-
-const View = props => {
-  let [content, setContent] = React.useState('')
-  const contentRef = React.useRef()
-  React.useEffect(function () {
-    fetch(readmePath).then(response => response.text())
-    .then(text => {
-      setContent(md.render(markdown()) )
-      console.log(contentRef.current)
-      // contentRef.current.innerHTML=text
-
-    })
-  },[])
 
 
-  return (
-    <div className="container">
-      <hr/>
-      <div dangerouslySetInnerHTML={{__html: content}} />
-      {/* {content} */}
-    
-    </div>
-  )
-}
 
-export default View

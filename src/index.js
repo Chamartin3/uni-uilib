@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 ReactDOM.render(
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <UniUiTheme>
         <App />
     </UniUiTheme>
